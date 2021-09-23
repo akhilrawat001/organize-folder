@@ -42,7 +42,9 @@ def main():
 	os.chdir(path)
 	files_and_folders = list_directory_contents()
 	for item in files_and_folders:
-		if not check_if_directory_exists(item):
+		if item[0] == '.':
+			print('Skipping', item)
+		elif not check_if_directory_exists(item):
 			extension = get_file_extension(item)
 			dir_name = create_folder_for_extension(extension)
 			move_file_to_directory(item, dir_name)
