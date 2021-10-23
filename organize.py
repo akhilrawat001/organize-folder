@@ -34,6 +34,10 @@ def move_file_to_directory(file, dir_name):
 		os.rename(file, dest_file_name)
 
 
+def backup_folder(path):
+	pass
+
+
 def main():
 	path = input('Enter the absolute path directory to organize:')
 	if not check_if_directory_exists(path):
