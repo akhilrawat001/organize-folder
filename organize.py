@@ -33,6 +33,9 @@ def move_file_to_directory(file, dir_name):
 		print('Moving', file, 'to', dest_file_name)
 		os.rename(file, dest_file_name)
 
+def delete_empy_folders_from_directory():
+	pass
+
 
 def main():
 	path = input('Enter the absolute path directory to organize:')
